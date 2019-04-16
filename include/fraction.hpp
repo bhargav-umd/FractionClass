@@ -63,8 +63,8 @@ public:
   friend fraction operator-(const fraction &, const fraction &);
   friend fraction operator*(const fraction &, const fraction &);
   friend fraction operator/(const fraction &, const fraction &);
-  friend bool operator==(const fraction &, const fraction &);
-  friend bool operator!=(const fraction &, const fraction &);
+  friend bool operator==(fraction &, fraction &);
+  friend bool operator!=(fraction &, fraction &);
   friend bool operator>(const fraction &, const fraction &);
   friend bool operator<(const fraction &, const fraction &);
 
@@ -72,8 +72,8 @@ public:
   friend fraction operator-(const fraction &, const T &);
   friend fraction operator*(const fraction &, const T &);
   friend fraction operator/(const fraction &, const T &);
-  friend bool operator==(const fraction &, const T &);
-  friend bool operator!=(const fraction &, const T &);
+  friend bool operator==(fraction &, const T &);
+  friend bool operator!=(fraction &, const T &);
   friend bool operator>(const fraction &, const T &);
   friend bool operator<(const fraction &, const T &);
 };
@@ -104,16 +104,19 @@ template <typename T> fraction<T>::fraction(const T &numer, const T &denomin) {
 }
 
 template <typename T>
-fraction<T> fraction<T>::simplifyFractions(fraction &frac) {
-  if (frac.denominator == 0) {
+fraction<T> fraction<T>::simplifyFractions(fraction &_fract) {
+  if (_fract.denominator == 0) {
     throw std::domain_error("denominator cannot be zero");
   }
 
-  T gcd = greatestCommonDivisor(frac.numerator, frac.denominator);
-  frac.numerator /= gcd;
-  frac.denominator /= gcd;
-
-  return frac;
+  T gcd = greatestCommonDivisor(_fract.numerator, _fract.denominator);
+  _fract.numerator /= gcd;
+  _fract.denominator /= gcd;
+  if (_fract.denominator < 0) {
+    _fract.denominator = abs(_fract.denominator);
+    _fract.numerator = -_fract.numerator;
+  }
+  return _fract;
 }
 
 template <typename T> T fraction<T>::getNumerator() { return this->numerator; }
@@ -123,4 +126,81 @@ template <typename T> T fraction<T>::getDenominator() {
 
 template <typename T> void fraction<T>::display() {
   std::cout << this->numerator << "/" << this->denominator << std::endl;
+}
+
+template <typename T>
+fraction<T> operator+(const fraction<T> &first, const fraction<T> &second) {
+  fraction<T> _fract;
+  _fract.numerator = first.numerator * second.denominator +
+                     second.numerator * first.denominator;
+  _fract.denominator = first.denominator * second.denominator;
+
+  return simplifyFractions(_fract);
+}
+template <typename T>
+fraction<T> operator+(const fraction<T> &first, const T &second) {
+  return first + fraction<T>(second, 1);
+}
+
+template <typename T>
+fraction<T> operator-(const fraction<T> &first, const fraction<T> &second) {
+  fraction<T> _fract;
+  _fract.numerator = first.numerator * second.denominator -
+                     second.numerator * first.denominator;
+  _fract.denominator = first.denominator * second.denominator;
+
+  return simplifyFractions(_fract);
+}
+template <typename T>
+fraction<T> operator-(const fraction<T> &first, const T &second) {
+  return first - fraction<T>(second, 1);
+}
+
+template <typename T>
+fraction<T> operator*(const fraction<T> &first, const fraction<T> &second) {
+  fraction<T> _fract;
+  _fract.numertor = first.numerator * second.numerator;
+  _fract.denominator = first.denominator * second.denominator;
+
+  return simplifyFractions(_fract);
+}
+
+template <typename T>
+fraction<T> operator*(const fraction<T> &first, const T &second) {
+  return first * fraction<T>(second, 1);
+}
+
+template <typename T>
+fraction<T> operator/(const fraction<T> &first, const fraction<T> &second) {
+  fraction<T> _fract;
+  _fract.numertor = first.numerator * second.denominator;
+  _fract.denominator = first.denominator * second.numerator;
+
+  return simplifyFractions(_fract);
+}
+
+template <typename T>
+fraction<T> operator/(const fraction<T> &first, const T &second) {
+  return first / fraction<T>(second, 1);
+}
+
+template <typename T> bool operator==(fraction<T> &first, fraction<T> &second) {
+  first = simplifyFractions(first);
+  second = simplifyFractions(second);
+
+  if (first.numerator == second.numerator &&
+      first.denominator == second.denominator)
+    return true;
+  else
+    return false;
+}
+template <typename T> bool operator==(fraction<T> &first, const T &second) {
+  return first == fraction<T>(second, 1);
+}
+
+template <typename T> bool operator!=(fraction<T> &first, fraction<T> &second) {
+  return !(first == second);
+}
+template <typename T> bool operator!=(fraction<T> &first, const T &second) {
+  return !(first == fraction<T>(second, 1));
 }
