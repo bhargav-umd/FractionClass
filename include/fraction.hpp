@@ -104,7 +104,7 @@ template <typename T> fraction<T>::fraction(const T &numer, const T &denomin) {
 }
 
 template <typename T>
-fraction<T> fraction<T>::simplifyFractions(fraction &_fract) {
+fraction<T> fraction<T>::simplifyFractions(fraction<T> &_fract) {
   if (_fract.denominator == 0) {
     throw std::domain_error("denominator cannot be zero");
   }
@@ -203,4 +203,25 @@ template <typename T> bool operator!=(fraction<T> &first, fraction<T> &second) {
 }
 template <typename T> bool operator!=(fraction<T> &first, const T &second) {
   return !(first == fraction<T>(second, 1));
+}
+
+template <typename T>
+bool operator>(fraction<T> &first, const fraction<T> &second) {
+  if ((first.numerator * second.denominator -
+       second.numerator * first.denominator) > 0) {
+    return true;
+  } else
+    return false;
+}
+
+template <typename T> bool operator>(fraction<T> &first, const T &second) {
+  return (first > fraction<T>(second, 1));
+}
+
+template <typename T> bool operator<(fraction<T> &first, fraction<T> &second) {
+  return !(first > fraction<T>(second, 1));
+}
+
+template <typename T> bool operator<(fraction<T> &first, const T &second) {
+  return !(first > fraction<T>(second, 1));
 }
