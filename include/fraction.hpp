@@ -80,20 +80,32 @@ public:
   void display();
   void simplifyFractions();
 
-  friend fraction<T> operator+<>(const fraction<T> &, const fraction<T> &);
-  friend fraction<T> operator-<>(const fraction<T> &, const fraction<T> &);
-  friend fraction<T> operator*<>(const fraction<T> &, const fraction<T> &);
-  friend fraction<T> operator/<>(const fraction<T> &, const fraction<T> &);
+  template <typename U>
+  friend fraction<U> operator+(const fraction<U> &, const fraction<U> &);
+  template <typename U>
+  friend fraction<U> operator-(const fraction<U> &, const fraction<U> &);
+  template <typename U>
+  friend fraction<U> operator*(const fraction<U> &, const fraction<U> &);
+  template <typename U>
+  friend fraction<U> operator/(const fraction<U> &, const fraction<U> &);
 
-  friend fraction<T> operator+<>(const fraction<T> &, const T &);
-  friend fraction<T> operator-<>(const fraction<T> &, const T &);
-  friend fraction<T> operator*<>(const fraction<T> &, const T &);
-  friend fraction<T> operator/<>(const fraction<T> &, const T &);
+  template <typename U>
+  friend fraction<U> operator+(const fraction<U> &, const U &);
+  template <typename U>
+  friend fraction<U> operator-(const fraction<U> &, const U &);
+  template <typename U>
+  friend fraction<U> operator*(const fraction<U> &, const U &);
+  template <typename U>
+  friend fraction<U> operator/(const fraction<U> &, const U &);
 
-  friend fraction<T> operator+<>(const T &, const fraction<T> &);
-  friend fraction<T> operator-<>(const T &, const fraction<T> &);
-  friend fraction<T> operator*<>(const T &, const fraction<T> &);
-  friend fraction<T> operator/<>(const T &, const fraction<T> &);
+  template <typename U>
+  friend fraction<U> operator+(const U &, const fraction<U> &);
+  template <typename U>
+  friend fraction<U> operator-(const U &, const fraction<U> &);
+  template <typename U>
+  friend fraction<U> operator*(const U &, const fraction<U> &);
+  template <typename U>
+  friend fraction<U> operator/(const U &, const fraction<U> &);
 
   template <typename U> friend bool operator==(fraction<U> &, fraction<U> &);
   template <typename U> friend bool operator!=(fraction<U> &, fraction<U> &);
