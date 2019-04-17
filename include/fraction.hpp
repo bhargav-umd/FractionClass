@@ -16,15 +16,15 @@ template <typename T>
 fraction<T> operator*(const fraction<T> &first, const fraction<T> &second);
 template <typename T>
 fraction<T> operator/(const fraction<T> &first, const fraction<T> &second);
+template <typename T>
 
+fraction<T> operator+(const T &first, const fraction<T> &second);
 template <typename T>
-fraction<T> operator==(const fraction<T> &first, const fraction<T> &second);
+fraction<T> operator-(const T &first, const fraction<T> &second);
 template <typename T>
-fraction<T> operator!=(const fraction<T> &first, const fraction<T> &second);
+fraction<T> operator*(const T &first, const fraction<T> &second);
 template <typename T>
-fraction<T> operator>(const fraction<T> &first, const fraction<T> &second);
-template <typename T>
-fraction<T> operator<(const fraction<T> &first, const fraction<T> &second);
+fraction<T> operator/(const T &first, const fraction<T> &second);
 
 template <typename T>
 fraction<T> operator+(const fraction<T> &first, const T &second);
@@ -36,6 +36,15 @@ template <typename T>
 fraction<T> operator/(const fraction<T> &first, const T &second);
 
 template <typename T>
+fraction<T> operator==(const fraction<T> &first, const fraction<T> &second);
+template <typename T>
+fraction<T> operator!=(const fraction<T> &first, const fraction<T> &second);
+template <typename T>
+fraction<T> operator>(const fraction<T> &first, const fraction<T> &second);
+template <typename T>
+fraction<T> operator<(const fraction<T> &first, const fraction<T> &second);
+
+template <typename T>
 fraction<T> operator==(const fraction<T> &first, const T &second);
 template <typename T>
 fraction<T> operator!=(const fraction<T> &first, const T &second);
@@ -43,6 +52,15 @@ template <typename T>
 fraction<T> operator>(const fraction<T> &first, const T &second);
 template <typename T>
 fraction<T> operator<(const fraction<T> &first, const T &second);
+
+template <typename T>
+fraction<T> operator==(const T &first, const fraction<T> &second);
+template <typename T>
+fraction<T> operator!=(const T &first, const fraction<T> &second);
+template <typename T>
+fraction<T> operator>(const T &first, const fraction<T> &second);
+template <typename T>
+fraction<T> operator<(const T &first, const fraction<T> &second);
 
 template <typename T> class fraction {
 private:
@@ -67,6 +85,16 @@ public:
   friend fraction<T> operator*<>(const fraction<T> &, const fraction<T> &);
   friend fraction<T> operator/<>(const fraction<T> &, const fraction<T> &);
 
+  friend fraction<T> operator+<>(const fraction<T> &, const T &);
+  friend fraction<T> operator-<>(const fraction<T> &, const T &);
+  friend fraction<T> operator*<>(const fraction<T> &, const T &);
+  friend fraction<T> operator/<>(const fraction<T> &, const T &);
+
+  friend fraction<T> operator+<>(const T &, const fraction<T> &);
+  friend fraction<T> operator-<>(const T &, const fraction<T> &);
+  friend fraction<T> operator*<>(const T &, const fraction<T> &);
+  friend fraction<T> operator/<>(const T &, const fraction<T> &);
+
   template <typename U> friend bool operator==(fraction<U> &, fraction<U> &);
   template <typename U> friend bool operator!=(fraction<U> &, fraction<U> &);
   template <typename U>
@@ -74,15 +102,15 @@ public:
   template <typename U>
   friend bool operator<(const fraction<U> &, const fraction<U> &);
 
-  friend fraction<T> operator+<>(const fraction<T> &, const T &);
-  friend fraction<T> operator-<>(const fraction<T> &, const T &);
-  friend fraction<T> operator*<>(const fraction<T> &, const T &);
-  friend fraction<T> operator/<>(const fraction<T> &, const T &);
-
   template <typename U> friend bool operator==(fraction<U> &, const U &);
   template <typename U> friend bool operator!=(fraction<U> &, const U &);
   template <typename U> friend bool operator>(const fraction<U> &, const U &);
   template <typename U> friend bool operator<(const fraction<U> &, const U &);
+
+  template <typename U> friend bool operator==(const U &, const fraction<U> &);
+  template <typename U> friend bool operator!=(const U &, const fraction<U> &);
+  template <typename U> friend bool operator>(const U &, const fraction<U> &);
+  template <typename U> friend bool operator<(const U &, const fraction<U> &);
 };
 
 template <typename T>
@@ -166,9 +194,12 @@ fraction<T> operator+(const fraction<T> &first, const fraction<T> &second) {
 }
 template <typename T>
 fraction<T> operator+(const fraction<T> &first, const T &second) {
-  return first + fraction<T>(second, 1);
+  return first + fraction<T>(second);
 }
-
+template <typename T>
+fraction<T> operator+(const T &first, const fraction<T> &second) {
+  return fraction<T>(first) + second;
+}
 template <typename T>
 fraction<T> operator-(const fraction<T> &first, const fraction<T> &second) {
   fraction<T> _fract;
@@ -190,6 +221,10 @@ template <typename T>
 fraction<T> operator-(const fraction<T> &first, const T &second) {
   return first - fraction<T>(second, 1);
 }
+template <typename T>
+fraction<T> operator-(const T &first, const fraction<T> &second) {
+  return fraction<T>(first) - second;
+}
 
 template <typename T>
 fraction<T> operator*(const fraction<T> &first, const fraction<T> &second) {
@@ -208,7 +243,11 @@ fraction<T> operator*(const fraction<T> &first, const fraction<T> &second) {
 
 template <typename T>
 fraction<T> operator*(const fraction<T> &first, const T &second) {
-  return first * fraction<T>(second, 1);
+  return first * fraction<T>(second);
+}
+template <typename T>
+fraction<T> operator*(const T &first, const fraction<T> &second) {
+  return fraction<T>(first) * second;
 }
 
 template <typename T>
@@ -219,6 +258,11 @@ fraction<T> operator/(const fraction<T> &first, const fraction<T> &second) {
   T b = first.getDenominator();
   T c = second.getNumerator();
   T d = second.getDenominator();
+
+  if (d == 0 || b == 0) {
+    throw std::domain_error("denominator cannot be zero");
+  }
+
   _fract.setNumerator(a * d);
   _fract.setDenominator(b * c);
 
@@ -229,7 +273,11 @@ fraction<T> operator/(const fraction<T> &first, const fraction<T> &second) {
 
 template <typename T>
 fraction<T> operator/(const fraction<T> &first, const T &second) {
-  return first / fraction<T>(second, 1);
+  return first / fraction<T>(second);
+}
+template <typename T>
+fraction<T> operator/(const T &first, const fraction<T> &second) {
+  return fraction<T>(first) / second;
 }
 
 template <typename T> bool operator==(fraction<T> &first, fraction<T> &second) {
@@ -247,14 +295,21 @@ template <typename T> bool operator==(fraction<T> &first, fraction<T> &second) {
     return false;
 }
 template <typename T> bool operator==(fraction<T> &first, const T &second) {
-  return first == fraction<T>(second, 1);
+  return first == fraction<T>(second);
+}
+
+template <typename T> bool operator==(const T &first, fraction<T> &second) {
+  return second == fraction<T>(first);
 }
 
 template <typename T> bool operator!=(fraction<T> &first, fraction<T> &second) {
   return !(first == second);
 }
 template <typename T> bool operator!=(fraction<T> &first, const T &second) {
-  return !(first == fraction<T>(second, 1));
+  return !(first == fraction<T>(second));
+}
+template <typename T> bool operator!=(const T &first, fraction<T> &second) {
+  return !(second == fraction<T>(first));
 }
 
 template <typename T>
@@ -276,6 +331,9 @@ bool operator>(fraction<T> &first, const fraction<T> &second) {
 template <typename T> bool operator>(fraction<T> &first, const T &second) {
   return (first > fraction<T>(second));
 }
+template <typename T> bool operator>(const T &first, fraction<T> &second) {
+  return (fraction<T>(first) > second);
+}
 
 template <typename T> bool operator<(fraction<T> &first, fraction<T> &second) {
   return !(first > fraction<T>(second));
@@ -283,4 +341,7 @@ template <typename T> bool operator<(fraction<T> &first, fraction<T> &second) {
 
 template <typename T> bool operator<(fraction<T> &first, const T &second) {
   return !(first > fraction<T>(second));
+}
+template <typename T> bool operator<(const T &first, fraction<T> &second) {
+  return (fraction<T>(first) < second);
 }

@@ -5,7 +5,7 @@ int main() {
   fraction<int> a(1, 2);
   fraction<int> b(3, 4);
 
-  fraction<int> c = a + b;
+  fraction<int> c = 5 + b;
   fraction<int> d = a * b;
   fraction<int> e = a / b;
   fraction<int> f = b - a;
@@ -14,6 +14,8 @@ int main() {
   bool h = a < b;
   bool i = (a == b);
   bool j = (a != b);
+
+  fraction<double> k(33, 44.5);
 
   c.display();
   d.display();
