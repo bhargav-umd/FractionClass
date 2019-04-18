@@ -2,8 +2,8 @@
 #include <gtest/gtest.h>
 
 // testing fraction class with in data type
-fraction<int> a(1, 2);
-fraction<int> b(3, 4);
+fraction<int> a(2, 4);
+fraction<int> b(6, 8);
 
 TEST(integerTest, addition_numerator) {
   fraction<int> sum = a + b;
@@ -84,14 +84,40 @@ TEST(integerTest, greater_test) {
 TEST(integerTest, greater_mix_test) {
   bool big = a > 1;
   ASSERT_FALSE(big);
+  bool bigg = (1 < a);
+  ASSERT_FALSE(bigg);
+}
+TEST(integerTest, lesser_test) {
+  bool greater = a < b;
+  ASSERT_TRUE(greater);
+}
+TEST(integerTest, lesser_mix_test) {
+  bool big = a < 1;
+  ASSERT_TRUE(big);
+  bool bigg = (1 < a);
+  ASSERT_FALSE(bigg);
 }
 
 TEST(integerTest, equality_test) {
-  // fraction<int> dd(2, 4);
-  bool equally = (b < a);
-  ASSERT_TRUE(equally);
+  bool equally = (b == a);
+  ASSERT_FALSE(equally);
 }
-/* TEST(integerTest, greater_mix_test_inv) { */
-// auto big = 1 > a;
-// // ASSERT_FALSE(big);
-/* } */
+
+TEST(integerTest, equalityMixTest) {
+  bool equally = (2 == a);
+  ASSERT_FALSE(equally);
+  bool equallly = (a == 5);
+  ASSERT_FALSE(equallly);
+}
+
+TEST(integerTest, notEqualTest) {
+  bool not_equal = (a != b);
+  ASSERT_TRUE(not_equal);
+}
+
+TEST(integerTest, notEqualMixTest) {
+  bool not_equall = (5 != b);
+  ASSERT_TRUE(not_equall);
+  bool not_eqalll = (a != 5);
+  ASSERT_TRUE(not_eqalll);
+}
