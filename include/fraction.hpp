@@ -59,8 +59,8 @@ template <typename T>
 fraction<T> operator!=(const T &first, const fraction<T> &second);
 template <typename T>
 fraction<T> operator>(const T &first, const fraction<T> &second);
-template <typename T>
-fraction<T> operator<(const T &first, const fraction<T> &second);
+// template <typename T>
+// fraction<T> operator<(const T &first, const fraction<T> &second);
 
 template <typename T> class fraction {
 private:
@@ -68,7 +68,7 @@ private:
 
 public:
   fraction<T>();
-  fraction<T>(T);
+  fraction<T>(const T &);
   fraction<T>(const T &, const T &);
 
   T getNumerator() const;
@@ -107,22 +107,24 @@ public:
   template <typename U>
   friend fraction<U> operator/(const U &, const fraction<U> &);
 
-  template <typename U> friend bool operator==(fraction<U> &, fraction<U> &);
-  template <typename U> friend bool operator!=(fraction<U> &, fraction<U> &);
+  template <typename U>
+  friend bool operator==(const fraction<U> &, const fraction<U> &);
+  template <typename U>
+  friend bool operator!=(const fraction<U> &, const fraction<U> &);
   template <typename U>
   friend bool operator>(const fraction<U> &, const fraction<U> &);
   template <typename U>
   friend bool operator<(const fraction<U> &, const fraction<U> &);
 
-  template <typename U> friend bool operator==(fraction<U> &, const U &);
-  template <typename U> friend bool operator!=(fraction<U> &, const U &);
-  template <typename U> friend bool operator>(const fraction<U> &, const U &);
+  template <typename U> friend bool operator==(const fraction<U> &, U &);
+  template <typename U> friend bool operator!=(const fraction<U> &, U &);
+  template <typename U> friend bool operator>(const fraction<U> &, U &);
   template <typename U> friend bool operator<(const fraction<U> &, const U &);
 
   template <typename U> friend bool operator==(const U &, const fraction<U> &);
   template <typename U> friend bool operator!=(const U &, const fraction<U> &);
-  template <typename U> friend bool operator>(const U &, const fraction<U> &);
-  template <typename U> friend bool operator<(const U &, const fraction<U> &);
+  template <typename U> friend bool operator>(U &, const fraction<U> &);
+  template <typename U> friend bool operator<(U &, const fraction<U> &);
 };
 
 template <typename T>
@@ -138,7 +140,7 @@ template <typename T> fraction<T>::fraction() {
   this->denominator = 1;
 }
 
-template <typename T> fraction<T>::fraction(T number) {
+template <typename T> fraction<T>::fraction(const T &number) {
   this->numerator = number;
   this->denominator = 1;
 }
@@ -196,11 +198,6 @@ fraction<T> operator+(const fraction<T> &first, const fraction<T> &second) {
 
   _fract.setNumerator(a * d + c * b);
   _fract.setDenominator(b * d);
-  /* _fract.numerator = first.numerator * second.denominator + */
-  //                    second.numerator * first.denominator;
-  // _fract.denominator = first.denominator * second.denominator;
-  /*  */
-  // return simplifyFractions(_fract);
   _fract.simplifyFractions();
   return _fract;
 }
@@ -221,13 +218,8 @@ fraction<T> operator-(const fraction<T> &first, const fraction<T> &second) {
   T d = second.getDenominator();
   _fract.setNumerator(a * d - c * b);
   _fract.setDenominator(b * d);
-  /* _fract.numerator = first.numerator * second.denominator - */
-  //                    second.numerator * first.denominator;
-  // _fract.denominator = first.denominator * second.denominator;
-  /*  */
   _fract.simplifyFractions();
   return _fract;
-  // return simplifyFractions(_fract);
 }
 template <typename T>
 fraction<T> operator-(const fraction<T> &first, const T &second) {
@@ -249,8 +241,6 @@ fraction<T> operator*(const fraction<T> &first, const fraction<T> &second) {
   _fract.setDenominator(b * d);
   _fract.simplifyFractions();
   return _fract;
-
-  // return simplifyFractions(_fract);
 }
 
 template <typename T>
@@ -307,21 +297,63 @@ template <typename T> bool operator==(fraction<T> &first, fraction<T> &second) {
     return false;
 }
 template <typename T> bool operator==(fraction<T> &first, const T &second) {
-  return first == fraction<T>(second);
+  first.simplifyFractions();
+  fraction<int> number(second, 1);
+  T a = first.getNumerator();
+  T b = first.getDenominator();
+  T c = number.getNumerator();
+  T d = number.getDenominator();
+  if (a == c && b == d)
+    return true;
+  else
+    return false;
+
+  //    return first == fraction<T>(second);
 }
 
 template <typename T> bool operator==(const T &first, fraction<T> &second) {
-  return second == fraction<T>(first);
+  second.simplifyFractions();
+  fraction<int> number(first, 1);
+  T a = second.getNumerator();
+  T b = second.getDenominator();
+  T c = number.getNumerator();
+  T d = number.getDenominator();
+  if (a == c && b == d)
+    return true;
+  else
+    return false;
+
+  // return second == fraction<T>(first);
 }
 
 template <typename T> bool operator!=(fraction<T> &first, fraction<T> &second) {
   return !(first == second);
 }
 template <typename T> bool operator!=(fraction<T> &first, const T &second) {
-  return !(first == fraction<T>(second));
+  first.simplifyFractions();
+  fraction<int> number(second, 1);
+  T a = first.getNumerator();
+  T b = first.getDenominator();
+  T c = number.getNumerator();
+  T d = number.getDenominator();
+  if (a == c && b == d)
+    return false;
+  else
+    return true;
+
+  // return !(first == fraction<T>(second));
 }
 template <typename T> bool operator!=(const T &first, fraction<T> &second) {
-  return !(second == fraction<T>(first));
+  second.simplifyFractions();
+  fraction<int> number(first, 1);
+  T a = second.getNumerator();
+  T b = second.getDenominator();
+  T c = number.getNumerator();
+  T d = number.getDenominator();
+  if (a == c && b == d)
+    return false;
+  else
+    return true;
 }
 
 template <typename T>
@@ -341,10 +373,28 @@ bool operator>(fraction<T> &first, const fraction<T> &second) {
 }
 
 template <typename T> bool operator>(fraction<T> &first, const T &second) {
-  return (first > fraction<T>(second));
+  first.simplifyFractions();
+  fraction<int> number(second, 1);
+  T a = first.getNumerator();
+  T b = first.getDenominator();
+  T c = number.getNumerator();
+  T d = number.getDenominator();
+  if ((a * d - c * b) > 0) {
+    return true;
+  } else
+    return false;
 }
-template <typename T> bool operator>(const T &first, fraction<T> &second) {
-  return (fraction<T>(first) > second);
+template <typename T> bool operator>(T &first, fraction<T> &second) {
+  second.simplifyFractions();
+  fraction<int> number(first, 1);
+  T a = second.getNumerator();
+  T b = second.getDenominator();
+  T c = number.getNumerator();
+  T d = number.getDenominator();
+  if ((a * d - c * b) > 0) {
+    return true;
+  } else
+    return false;
 }
 
 template <typename T> bool operator<(fraction<T> &first, fraction<T> &second) {
@@ -352,8 +402,26 @@ template <typename T> bool operator<(fraction<T> &first, fraction<T> &second) {
 }
 
 template <typename T> bool operator<(fraction<T> &first, const T &second) {
-  return !(first > fraction<T>(second));
+  first.simplifyFractions();
+  fraction<int> number(second, 1);
+  T a = first.getNumerator();
+  T b = first.getDenominator();
+  T c = number.getNumerator();
+  T d = number.getDenominator();
+  if ((a * d - c * b) > 0) {
+    return false;
+  } else
+    return true;
 }
 template <typename T> bool operator<(const T &first, fraction<T> &second) {
-  return (fraction<T>(first) < second);
+  second.simplifyFractions();
+  fraction<int> number(first, 1);
+  T a = second.getNumerator();
+  T b = second.getDenominator();
+  T c = number.getNumerator();
+  T d = number.getDenominator();
+  if ((a * d - c * b) > 0) {
+    return false;
+  } else
+    return true;
 }
