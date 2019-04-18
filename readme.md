@@ -40,6 +40,18 @@ ostream
 
 ## Install via command line 
 ```
+sudo apt-get install lcov
+```
+If you dont want to install lcov, change following lines in 'CMakeLists.txt' file
+```
+option(COVERAGE "Generate Coverage Data" ON)
+```
+to 
+```
+option(COVERAGE "Generate Coverage Data" OFF)
+```
+and follow these instruction to build 
+```
 cd <path to repository>
 mkdir build
 cd build
