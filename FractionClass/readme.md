@@ -39,7 +39,6 @@ ostream
 
 
 ## Install via command line 
-
 ```
 sudo apt-get install lcov
 ```
