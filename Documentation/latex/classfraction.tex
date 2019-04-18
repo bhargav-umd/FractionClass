@@ -1,0 +1,1001 @@
+\hypertarget{classfraction}{}\section{fraction$<$ T $>$ Class Template Reference}
+\label{classfraction}\index{fraction$<$ T $>$@{fraction$<$ T $>$}}
+
+
+Fraction class declaration mentioning all members.  
+
+
+
+
+{\ttfamily \#include $<$fraction.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfraction_a06d1282041ed142bcd60954d574d27c9}{fraction} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classfraction_a5680969378119101e335765e1f61d135}{fraction} (const T \&)
+\begin{DoxyCompactList}\small\item\em Paremeterised constructor to convert T to fraction$<$\+T$>$ \end{DoxyCompactList}\item 
+\hyperlink{classfraction_a3d993a9a34b792cc9ff5c6580efd1c69}{fraction} (const T \&, const T \&)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor to form fraction. \end{DoxyCompactList}\item 
+T \hyperlink{classfraction_ab2c71b6d8a1fe8cc38fca27557c8af9e}{get\+Numerator} () const 
+\begin{DoxyCompactList}\small\item\em Numerator getter function. \end{DoxyCompactList}\item 
+T \hyperlink{classfraction_a99611e6e50d2527d0b19c786995f401f}{get\+Denominator} () const 
+\begin{DoxyCompactList}\small\item\em getter function for denominator \end{DoxyCompactList}\item 
+void \hyperlink{classfraction_a2ab1807fd2d62646e10033fd161d239f}{set\+Numerator} (const T \&)
+\begin{DoxyCompactList}\small\item\em Numerator setter function. \end{DoxyCompactList}\item 
+void \hyperlink{classfraction_ac7753c1adda4d389178570718014d331}{set\+Denominator} (const T \&)
+\begin{DoxyCompactList}\small\item\em denominator setter function \end{DoxyCompactList}\item 
+void \hyperlink{classfraction_a9449f42f0fe675204aa66f930dc7f424}{display} ()
+\begin{DoxyCompactList}\small\item\em TO display fraction value. \end{DoxyCompactList}\item 
+void \hyperlink{classfraction_ad9cf1bb8fb5b761ed9bf3d47dd97af21}{simplify\+Fractions} ()
+\begin{DoxyCompactList}\small\item\em To reduce the value of the fraction to minimal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_a0d56e8a8a2cb2fcdb18bf992d35dcbb8}{operator+} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator + ; (a/b +c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_a35242050e665b8b85494a31d90b4edaf}{operator-\/} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator -\/ (a/b -\/ c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_a70aef516b86d3edb07367dfb024d5d84}{operator$\ast$} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator $\ast$ ; (a/b $\ast$ c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_a48ddf8e26023e5842137fdcfe502cb47}{operator/} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator / ; ( (a/b) / (c/d) ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_ae89823424fb724266af61bfa09797009}{operator+} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const U \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator + ( a/b +c) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_a84647c023668f65f5013eb3034e5f636}{operator-\/} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const U \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator -\/ ( a/b -\/c ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_a7a77480266369ecda91dc06b2244c935}{operator$\ast$} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const U \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator $\ast$ ( a/b $\ast$ c ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_a8cae4fd1fa69a30be8d60196c09dce25}{operator/} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const U \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator / ( (a/b) / c ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_ae0cc6286fb1c4dbe124b2e5e23a70e3a}{operator+} (const U \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator + ( a + c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_a8962a9c6f5c90b25df78217174f80074}{operator-\/} (const U \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator -\/; (a -\/c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_a5689faf050fe7611e58b5285f3571d25}{operator$\ast$} (const U \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator $\ast$ ; (a $\ast$ c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classfraction}{fraction}$<$ U $>$ \hyperlink{classfraction_a78fa3a599aa5341bfd786191ab02aa68}{operator/} (const U \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em friend function to be able to give inputs as fraction(objects of the class) ,overloading operator / ; ( a / (c/d)) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_a5757e7b3d62bd8e890d23edd4c39f3d3}{operator==} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em To compare fraction and number of type U overloading operator == ( a/b == c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_afb3610110503cc780a655a8caee5623b}{operator!=} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em To compare fraction and number of type U overloading operator != ( a/b != c/d ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_a31b15331322cf3ce7e66e1dc4fa2a092}{operator$>$} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em To compare fraction and number of type U overloading operator $>$ ; ( a/b $>$ c/d ) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_a0b07c4f8bf755c5d0a4918a86bd2f662}{operator$<$} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em To compare fraction and number of type U overloading operator $<$ ; (a/b $<$ c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_a09254b21ac58c2703eb6ebc57fdd99c4}{operator==} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, U \&)
+\begin{DoxyCompactList}\small\item\em to compare fraction and number of type U; (a/b ==c) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_acdb9976322ecd40da677e3298e84cff0}{operator!=} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, U \&)
+\begin{DoxyCompactList}\small\item\em to compare fraction and number of type U; (a/b !=c) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_ad1ae5fef18269956585042b1abfd7abc}{operator$>$} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, U \&)
+\begin{DoxyCompactList}\small\item\em to compare fraction and number of type U; (a/b $>$ c) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_adfe03f3856fdde8a08611696723811cc}{operator$<$} (const \hyperlink{classfraction}{fraction}$<$ U $>$ \&, const U \&)
+\begin{DoxyCompactList}\small\item\em to compare fraction and number of type U; (a/b $<$c) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_a2ae5db641dd3ff6c7c7cd7ff2cc87c3f}{operator==} (const U \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em TO compare number of type U and fraction ; (a == c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_ab80c7e144f2a388dbca530689941fceb}{operator!=} (const U \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em TO compare number of type U and fraction ; (a != c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_a21d2d97b1b2d35f59b9c46e44040420f}{operator$>$} (U \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em TO compare number of type U and fraction ; (a $>$ c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\bool \hyperlink{classfraction_a5df1311904060a3a8829d0773c54c646}{operator$<$} (U \&, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em TO compare number of type U and fraction ; (a $<$ c/d) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\std\+::ostream \& \hyperlink{classfraction_adf5c6cc9e7c3bb976f2c49014c142fa3}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em To show output in ostream. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\std\+::istream \& \hyperlink{classfraction_a09765f79b9f5af95135d537284a84b7a}{operator$>$$>$} (std\+::istream \&in, \hyperlink{classfraction}{fraction}$<$ U $>$ \&)
+\begin{DoxyCompactList}\small\item\em to take input of fraction \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class fraction$<$ T $>$}
+
+Fraction class declaration mentioning all members. 
+
+Fraction class declaration with all memebers.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & template parameter\\
+\hline
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{fraction@{fraction}!fraction@{fraction}}
+\index{fraction@{fraction}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{fraction()}{fraction()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf fraction}$<$ T $>$\+::{\bf fraction} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classfraction_a06d1282041ed142bcd60954d574d27c9}{}\label{classfraction_a06d1282041ed142bcd60954d574d27c9}
+
+
+default constructor 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & template parameter to define type of data in fraction \\
+\hline
+\end{DoxyTemplParams}
+\index{fraction@{fraction}!fraction@{fraction}}
+\index{fraction@{fraction}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{fraction(const T \&)}{fraction(const T &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf fraction}$<$ T $>$\+::{\bf fraction} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{number}
+\end{DoxyParamCaption}
+)}\hypertarget{classfraction_a5680969378119101e335765e1f61d135}{}\label{classfraction_a5680969378119101e335765e1f61d135}
+
+
+Paremeterised constructor to convert T to fraction$<$\+T$>$ 
+
+a/1 Parameterized constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & ( basically numberator for the fraction, where denomiator is 1\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & (a) \\
+\hline
+\end{DoxyParams}
+\index{fraction@{fraction}!fraction@{fraction}}
+\index{fraction@{fraction}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{fraction(const T \&, const T \&)}{fraction(const T &, const T &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf fraction}$<$ T $>$\+::{\bf fraction} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{numer, }
+\item[{const T \&}]{denomin}
+\end{DoxyParamCaption}
+)}\hypertarget{classfraction_a3d993a9a34b792cc9ff5c6580efd1c69}{}\label{classfraction_a3d993a9a34b792cc9ff5c6580efd1c69}
+
+
+Parameterized constructor to form fraction. 
+
+a/b = numer/denomin , Parameterized constructor with condition to check if we get 0 as denominator by any chance;
+
+
+\begin{DoxyParams}{Parameters}
+{\em Numerator} & of the fraction \\
+\hline
+{\em Denominator} & of the fraction\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & data type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em numer} & \\
+\hline
+{\em denomin} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{fraction@{fraction}!display@{display}}
+\index{display@{display}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{display()}{display()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf fraction}$<$ T $>$\+::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classfraction_a9449f42f0fe675204aa66f930dc7f424}{}\label{classfraction_a9449f42f0fe675204aa66f930dc7f424}
+
+
+TO display fraction value. 
+
+To show fraction.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\index{fraction@{fraction}!get\+Denominator@{get\+Denominator}}
+\index{get\+Denominator@{get\+Denominator}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{get\+Denominator() const }{getDenominator() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf fraction}$<$ T $>$\+::get\+Denominator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classfraction_a99611e6e50d2527d0b19c786995f401f}{}\label{classfraction_a99611e6e50d2527d0b19c786995f401f}
+
+
+getter function for denominator 
+
+Denominator getter.
+
+\begin{DoxyReturn}{Returns}
+dinominator of the fraction (this)
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+get denominator 
+\end{DoxyReturn}
+\index{fraction@{fraction}!get\+Numerator@{get\+Numerator}}
+\index{get\+Numerator@{get\+Numerator}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{get\+Numerator() const }{getNumerator() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf fraction}$<$ T $>$\+::get\+Numerator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classfraction_ab2c71b6d8a1fe8cc38fca27557c8af9e}{}\label{classfraction_ab2c71b6d8a1fe8cc38fca27557c8af9e}
+
+
+Numerator getter function. 
+
+Numerator getter.
+
+\begin{DoxyReturn}{Returns}
+numerator of the \hyperlink{classfraction}{fraction(this)}
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+numerator value 
+\end{DoxyReturn}
+\index{fraction@{fraction}!set\+Denominator@{set\+Denominator}}
+\index{set\+Denominator@{set\+Denominator}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{set\+Denominator(const T \&)}{setDenominator(const T &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf fraction}$<$ T $>$\+::set\+Denominator (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{dinom}
+\end{DoxyParamCaption}
+)}\hypertarget{classfraction_ac7753c1adda4d389178570718014d331}{}\label{classfraction_ac7753c1adda4d389178570718014d331}
+
+
+denominator setter function 
+
+Set Denominator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em denominator} & to be set\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em dinom} & \\
+\hline
+\end{DoxyParams}
+\index{fraction@{fraction}!set\+Numerator@{set\+Numerator}}
+\index{set\+Numerator@{set\+Numerator}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{set\+Numerator(const T \&)}{setNumerator(const T &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf fraction}$<$ T $>$\+::set\+Numerator (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{numer}
+\end{DoxyParamCaption}
+)}\hypertarget{classfraction_a2ab1807fd2d62646e10033fd161d239f}{}\label{classfraction_a2ab1807fd2d62646e10033fd161d239f}
+
+
+Numerator setter function. 
+
+Set Numerator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em numerator} & to be set\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em numer} & \\
+\hline
+\end{DoxyParams}
+\index{fraction@{fraction}!simplify\+Fractions@{simplify\+Fractions}}
+\index{simplify\+Fractions@{simplify\+Fractions}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{simplify\+Fractions()}{simplifyFractions()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf fraction}$<$ T $>$\+::simplify\+Fractions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classfraction_ad9cf1bb8fb5b761ed9bf3d47dd97af21}{}\label{classfraction_ad9cf1bb8fb5b761ed9bf3d47dd97af21}
+
+
+To reduce the value of the fraction to minimal. 
+
+to reduce the fration to its minimum i.,e (2/4) = (1/2)
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{fraction@{fraction}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator"!=}{operator!=}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_afb3610110503cc780a655a8caee5623b}{}\label{classfraction_afb3610110503cc780a655a8caee5623b}
+
+
+To compare fraction and number of type U overloading operator != ( a/b != c/d ) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & Template parameter \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fraction} & first \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if not equal else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator"!=}{operator!=}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{U \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_acdb9976322ecd40da677e3298e84cff0}{}\label{classfraction_acdb9976322ecd40da677e3298e84cff0}
+
+
+to compare fraction and number of type U; (a/b !=c) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & template parameter U \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fraction} & \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if not equal else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator"!=}{operator!=}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const U \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_ab80c7e144f2a388dbca530689941fceb}{}\label{classfraction_ab80c7e144f2a388dbca530689941fceb}
+
+
+TO compare number of type U and fraction ; (a != c/d) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & of type U \\
+\hline
+{\em fraction$<$\+U$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if not equal else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$\ast$}{operator*}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a70aef516b86d3edb07367dfb024d5d84}{}\label{classfraction_a70aef516b86d3edb07367dfb024d5d84}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator $\ast$ ; (a/b $\ast$ c/d) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em fraction} & first \\
+\hline
+{\em fraction} & second\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+product 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$\ast$}{operator*}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const U \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a7a77480266369ecda91dc06b2244c935}{}\label{classfraction_a7a77480266369ecda91dc06b2244c935}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator $\ast$ ( a/b $\ast$ c ) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em fraction} & first \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+product 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$\ast$}{operator*}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const U \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a5689faf050fe7611e58b5285f3571d25}{}\label{classfraction_a5689faf050fe7611e58b5285f3571d25}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator $\ast$ ; (a $\ast$ c/d) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em number} & of type U \\
+\hline
+{\em fraction} & second\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+product 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator+@{operator+}}
+\index{operator+@{operator+}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator+}{operator+}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a0d56e8a8a2cb2fcdb18bf992d35dcbb8}{}\label{classfraction_a0d56e8a8a2cb2fcdb18bf992d35dcbb8}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator + ; (a/b +c/d) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em fraction} & first \\
+\hline
+{\em fraction} & second\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator+@{operator+}}
+\index{operator+@{operator+}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator+}{operator+}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const U \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_ae89823424fb724266af61bfa09797009}{}\label{classfraction_ae89823424fb724266af61bfa09797009}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator + ( a/b +c) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em fraction} & first \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator+@{operator+}}
+\index{operator+@{operator+}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator+}{operator+}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator+ (
+\begin{DoxyParamCaption}
+\item[{const U \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_ae0cc6286fb1c4dbe124b2e5e23a70e3a}{}\label{classfraction_ae0cc6286fb1c4dbe124b2e5e23a70e3a}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator + ( a + c/d) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em number} & of type U \\
+\hline
+{\em fraction} & second\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator-\/}{operator-}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a35242050e665b8b85494a31d90b4edaf}{}\label{classfraction_a35242050e665b8b85494a31d90b4edaf}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator -\/ (a/b -\/ c/d) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em fraction} & first \\
+\hline
+{\em fraction} & second\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+difference 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator-\/}{operator-}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const U \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a84647c023668f65f5013eb3034e5f636}{}\label{classfraction_a84647c023668f65f5013eb3034e5f636}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator -\/ ( a/b -\/c ) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em fraction} & first \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+difference 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator-\/}{operator-}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const U \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a8962a9c6f5c90b25df78217174f80074}{}\label{classfraction_a8962a9c6f5c90b25df78217174f80074}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator -\/; (a -\/c/d) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em number} & of type U \\
+\hline
+{\em fraction} & second\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+difference 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator/@{operator/}}
+\index{operator/@{operator/}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator/}{operator/}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a48ddf8e26023e5842137fdcfe502cb47}{}\label{classfraction_a48ddf8e26023e5842137fdcfe502cb47}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator / ; ( (a/b) / (c/d) ) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em fraction} & first \\
+\hline
+{\em fraction} & second\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+division solution 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator/@{operator/}}
+\index{operator/@{operator/}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator/}{operator/}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const U \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a8cae4fd1fa69a30be8d60196c09dce25}{}\label{classfraction_a8cae4fd1fa69a30be8d60196c09dce25}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator / ( (a/b) / c ) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em fraction} & first \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+division solution 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator/@{operator/}}
+\index{operator/@{operator/}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator/}{operator/}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf fraction}$<$U$>$ operator/ (
+\begin{DoxyParamCaption}
+\item[{const U \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a78fa3a599aa5341bfd786191ab02aa68}{}\label{classfraction_a78fa3a599aa5341bfd786191ab02aa68}
+
+
+friend function to be able to give inputs as fraction(objects of the class) ,overloading operator / ; ( a / (c/d)) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em U} & template parameter \\
+\hline
+{\em number} & of type U \\
+\hline
+{\em fraction} & second\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+division result 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$<$}{operator<}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a0b07c4f8bf755c5d0a4918a86bd2f662}{}\label{classfraction_a0b07c4f8bf755c5d0a4918a86bd2f662}
+
+
+To compare fraction and number of type U overloading operator $<$ ; (a/b $<$ c/d) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & Template parameter \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fraction} & first \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if less else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$<$}{operator<}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const U \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_adfe03f3856fdde8a08611696723811cc}{}\label{classfraction_adfe03f3856fdde8a08611696723811cc}
+
+
+to compare fraction and number of type U; (a/b $<$c) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & template parameter U \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fraction} & \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if lesser else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$<$}{operator<}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator$<$ (
+\begin{DoxyParamCaption}
+\item[{U \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a5df1311904060a3a8829d0773c54c646}{}\label{classfraction_a5df1311904060a3a8829d0773c54c646}
+
+
+TO compare number of type U and fraction ; (a $<$ c/d) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & of type U \\
+\hline
+{\em fraction$<$\+U$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if lesser else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{out, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_adf5c6cc9e7c3bb976f2c49014c142fa3}{}\label{classfraction_adf5c6cc9e7c3bb976f2c49014c142fa3}
+
+
+To show output in ostream. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & Template parameter U \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & \\
+\hline
+{\em fraction} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator==@{operator==}}
+\index{operator==@{operator==}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator==}{operator==}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a5757e7b3d62bd8e890d23edd4c39f3d3}{}\label{classfraction_a5757e7b3d62bd8e890d23edd4c39f3d3}
+
+
+To compare fraction and number of type U overloading operator == ( a/b == c/d) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & Template parameter \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fraction} & first \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if equal else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator==@{operator==}}
+\index{operator==@{operator==}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator==}{operator==}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{U \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a09254b21ac58c2703eb6ebc57fdd99c4}{}\label{classfraction_a09254b21ac58c2703eb6ebc57fdd99c4}
+
+
+to compare fraction and number of type U; (a/b ==c) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & template parameter U \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fraction} & \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if equal else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator==@{operator==}}
+\index{operator==@{operator==}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator==}{operator==}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator== (
+\begin{DoxyParamCaption}
+\item[{const U \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a2ae5db641dd3ff6c7c7cd7ff2cc87c3f}{}\label{classfraction_a2ae5db641dd3ff6c7c7cd7ff2cc87c3f}
+
+
+TO compare number of type U and fraction ; (a == c/d) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & of type U \\
+\hline
+{\em fraction$<$\+U$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if equal else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$>$}{operator>}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a31b15331322cf3ce7e66e1dc4fa2a092}{}\label{classfraction_a31b15331322cf3ce7e66e1dc4fa2a092}
+
+
+To compare fraction and number of type U overloading operator $>$ ; ( a/b $>$ c/d ) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & Template parameter \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fraction} & first \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if greater else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$>$}{operator>}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fraction}$<$ U $>$ \&}]{, }
+\item[{U \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_ad1ae5fef18269956585042b1abfd7abc}{}\label{classfraction_ad1ae5fef18269956585042b1abfd7abc}
+
+
+to compare fraction and number of type U; (a/b $>$ c) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & template parameter U \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fraction} & \\
+\hline
+{\em number} & of type U\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool true if greater else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$>$}{operator>}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{U \&}]{, }
+\item[{const {\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a21d2d97b1b2d35f59b9c46e44040420f}{}\label{classfraction_a21d2d97b1b2d35f59b9c46e44040420f}
+
+
+TO compare number of type U and fraction ; (a $>$ c/d) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & of type U \\
+\hline
+{\em fraction$<$\+U$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if greater else false 
+\end{DoxyReturn}
+\index{fraction@{fraction}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!fraction@{fraction}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ std\+::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\+::istream \&}]{in, }
+\item[{{\bf fraction}$<$ U $>$ \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classfraction_a09765f79b9f5af95135d537284a84b7a}{}\label{classfraction_a09765f79b9f5af95135d537284a84b7a}
+
+
+to take input of fraction 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em U} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em in} & istream \\
+\hline
+{\em fraction$<$\+U$>$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+istream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/bob/\+Bob\+\_\+old/\+Mathworks/include/\hyperlink{fraction_8hpp}{fraction.\+hpp}\end{DoxyCompactItemize}
