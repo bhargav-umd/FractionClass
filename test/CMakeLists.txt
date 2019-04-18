@@ -4,7 +4,7 @@ add_executable(
     fraction_test
     main.cpp
     integersFractionTest.cpp
-)
+    longDoubleFraction.cpp)
 
 target_include_directories(fraction_test PUBLIC ../vendor/googletest/googletest/include 
                                            ${CMAKE_SOURCE_DIR}/include)

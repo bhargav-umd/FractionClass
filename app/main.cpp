@@ -10,7 +10,6 @@ int main() {
   fraction<int> e = a / b;
   fraction<int> f = b - a;
 
-  int pp = 1;
   //  bool g = pp < a;
   bool h = a > 1;
   bool i = (a == b);
@@ -23,6 +22,8 @@ int main() {
   e.display();
   f.display();
   // std::cout << g << std::endl;
+  std::cout << "printing c: ";
+  std::cout << c << std::endl;
   std::cout << h << i << j << std::endl;
   // std::cout << p << std::endl;
   return 0;

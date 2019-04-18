@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 
+template <typename T> T findRemainder(T, T);
 template <typename T> T greatestCommonDivisor(const T &, const T &);
 
 template <typename T> class fraction;
@@ -59,8 +60,11 @@ template <typename T>
 fraction<T> operator!=(const T &first, const fraction<T> &second);
 template <typename T>
 fraction<T> operator>(const T &first, const fraction<T> &second);
-// template <typename T>
-// fraction<T> operator<(const T &first, const fraction<T> &second);
+
+template <typename T>
+std::ostream &operator<<(std::ostream &out, const fraction<T> &a);
+template <typename T>
+std::istream &operator>>(std::istream &in, fraction<T> &a);
 
 template <typename T> class fraction {
 private:
@@ -125,14 +129,37 @@ public:
   template <typename U> friend bool operator!=(const U &, const fraction<U> &);
   template <typename U> friend bool operator>(U &, const fraction<U> &);
   template <typename U> friend bool operator<(U &, const fraction<U> &);
+
+  template <typename U>
+  friend std::ostream &operator<<(std::ostream &out, const fraction<U> &);
+  template <typename U>
+  friend std::istream &operator>>(std::istream &in, fraction<U> &);
 };
+
+template <typename T> T findRemainder(T first, T second) {
+  if (first < 0)
+    first = -first;
+  if (second < 0)
+    second = -second;
+
+  // finding mod by repeated subtraction
+  T mod = first;
+  while (mod >= second)
+    mod = mod - second;
+
+  if (first < 0)
+    return -mod;
+
+  return mod;
+}
 
 template <typename T>
 T greatestCommonDivisor(const T &numerator, const T &denominator) {
-  if (numerator % denominator == 0) {
+  if (findRemainder(numerator, denominator) == 0) {
     return denominator;
   }
-  return greatestCommonDivisor(denominator, numerator % denominator);
+  return greatestCommonDivisor(denominator,
+                               findRemainder(numerator, denominator));
 }
 
 template <typename T> fraction<T>::fraction() {
@@ -429,4 +456,16 @@ template <typename T> bool operator<(const T &first, fraction<T> &second) {
     return false;
   } else
     return true;
+}
+
+template <typename T>
+std::ostream &operator<<(std::ostream &out, const fraction<T> &fraction) {
+  out << fraction.numerator << "/" << fraction.denominator;
+  return out;
+}
+
+template <typename T>
+std::istream &operator>>(std::istream &in, fraction<T> &fraction) {
+  in >> fraction.numerator >> fraction.denominator;
+  return in;
 }
