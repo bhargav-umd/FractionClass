@@ -22,7 +22,7 @@ to as shown above in addition example.
 -   subtraction 
 -   multiplication 
 -   division
--   <, ==, !=, > (comparison)
+-   <, ==, !=, > (comparison) 
 Also includes << and >> operator to take input from istream and show output in
 ostream
 
