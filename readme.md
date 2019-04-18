@@ -1,4 +1,5 @@
 # Fraction Class
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview 
 A generic fraction class using C++ templates for storing and manipulating 
@@ -61,7 +62,9 @@ make
 make code_coverage
 ```
 #### This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
+Index page looks as shown below:
 
+![inputImage](https://github.com/bhargav-umd/FractionClass/blob/master/images/lcov_coverage)
 ## Doxygen Documentation
 To generate Doxygen Documentation in HTML and LaTEX, follow the next steps:
 ```
@@ -80,7 +83,8 @@ Run and generate the documents by running the next command:
 doxygen <config_file_name>
 `````````
 #### Use file Explorer and Open html/index.html file to see the doxygen documentation in web browser.
-
+The index.html file looks as shown below:
+![inputImage](https://github.com/bhargav-umd/FractionClass/blob/master/images/doxy_files)
 ## Author
 * ** Bhargav Dandamudi **
 
