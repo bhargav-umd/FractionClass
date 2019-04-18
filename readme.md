@@ -1,26 +1,39 @@
 # Fraction Class
 
-##Overview 
+## Overview 
 A generic fraction class using C++ templates for storing and manipulating 
 fractions.Tested the entired class using unit tests.
 It includes following features:
 - Store negative and positive fractions, in fractional form (decimal approximations will not be made);
-- Overload the following binary operators to apply to fractions
--   + (addition)
--   - (subtraction)
--   * (multiplication)
--   / (division)
--   <, ==, !=,, > (comparison)
--   << (used with std::cout)
--   >> (used with std::cin)
+- Can use the following binary operators on fractions
+-   addition (all combinations of operations are possible)
 
-TO DO:
+for example:
+```
+fraction<int> a(3,5);
+int b = 4;
+fraction<int> c = a+a;
+fracion<int> d = a +b;
+fraction<int> e = b +a;
+fraction<int> f = a + b +c;
+```
+all combinations are possible for all of the following operations as well, similar
+to as shown above in addition example.
+-   subtraction 
+-   multiplication 
+-   division
+-   <, ==, !=, > (comparison)
+Also includes << and >> operator to take input from istream and show output in
+ostream
+
+### TO DO:
 - Need to add conditions for overflow or underflow of data types when we
   perform operations on fractions
 - Add More Operators overloading (>=,<=,++,--,~,-=,+=,->,[],(),etc)
 - Make it generalise case which can also take care of std::string data type
 - Interaction with native std::math library
 - More optimized simplification of the operators
+- Need to add precendance for operators to calculate expresions properly (BODMAS rule)
 
 
 ## Install via command line 
@@ -67,3 +80,9 @@ doxygen <config_file_name>
 `````````
 #### Use file Explorer and Open html/index.html file to see the doxygen documentation in web browser.
 
+## Author
+* ** Bhargav Dandamudi **
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
