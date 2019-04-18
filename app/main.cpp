@@ -1,30 +1,43 @@
+/* Copyright (C)
+ * 2019 - Bhargav Dandamudi
+ *
+ * MIT License
+ *
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the 'Software'), to deal in the Software without
+ * restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute,
+ * sublicense, and/or sell copies of the Software, and to permit
+ * persons to whom the Software is furnished to do so,subject to
+ * the following conditions:
+ * The above copyright notice and this permission notice shall
+ * be included in all copies or substantial portions of the Software.
+ * THE SOFTWARE IS PROVIDED ''AS IS'', WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
+ * ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ * TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH
+ * THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ */
+/**
+ * @file main.cpp
+ * @brief  Main function for demo purpose only, all tests are in test folder
+ * @author Bhargav Dandamudi
+ * @version 1
+ * @date 2019-04-18
+ */
 #include "../include/fraction.hpp"
 #include <iostream>
 
 int main() {
   fraction<int> a(1, 2);
-  fraction<int> b(3, 4);
+  fraction<int> b(77, 4);
 
   fraction<int> c = 5 + b + 10;
-  fraction<int> d = a * b;
-  fraction<int> e = a / b;
-  fraction<int> f = b - a;
 
-  //  bool g = pp < a;
-  bool h = a > 1;
-  bool i = (a == b);
-  bool j = (a != b);
-  // auto p = 3 < 2.0;
-  fraction<double> k(33, 44.5);
-
-  c.display();
-  d.display();
-  e.display();
-  f.display();
-  // std::cout << g << std::endl;
-  std::cout << "printing c: ";
   std::cout << c << std::endl;
-  std::cout << h << i << j << std::endl;
-  // std::cout << p << std::endl;
   return 0;
 }

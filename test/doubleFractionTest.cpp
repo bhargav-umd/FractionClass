@@ -23,270 +23,226 @@
  *
  */
 /**
- * @file integersFractionTest.cpp
- * @brief  Includes test cases for all functions in fraction class using int
- *         data type
+ * @file doubleFractionTest.cpp
+ * @brief  Testing fraction class functions with double data type
  * @author Bhargav Dandamudi
  * @version 1
  * @date 2019-04-18
  */
-
 #include "../include/fraction.hpp"
 #include <gtest/gtest.h>
 
-// creating two fractions to be used in majority of the test cases
-fraction<int> a(2, 4);
-fraction<int> b(6, 8);
+// creating two fractions of type double, to be used in majority of the test
+// cases
+fraction<double> aa(2, 4);
+fraction<double> bb(6, 8);
 
 /* ----------------------------------------------------------------*/
 /**
- * @brief  check we can add two fractions
+ * @brief  a/b +c/d
  *
- * @param integerTest
+ * @param DoubleTest
  * @param addition_numerator
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, addition_numerator) {
-  fraction<int> sum = a + b;
+TEST(DoubleTest, addition_numerator) {
+  fraction<double> sum = aa + bb;
   EXPECT_EQ(5, sum.getNumerator());
-  fraction<int> na(-3, 4);
-  fraction<int> nsum = na + b;
-  EXPECT_EQ(0, nsum.getNumerator());
 }
-/* ----------------------------------------------------------------*/
-/**
- * @brief  check denominator after addition
- *
- * @param integerTest
- * @param addition_denominator
- */
-/* ----------------------------------------------------------------*/
-TEST(integerTest, addition_denominator) {
-  fraction<int> sum = a + b;
+TEST(DoubleTest, addition_denominator) {
+  fraction<double> sum = aa + bb;
   EXPECT_EQ(4, sum.getDenominator());
 }
 /* ----------------------------------------------------------------*/
 /**
- * @brief  check a+5; (fraction<U> + U) and (U +fraction<U>)
+ * @brief  a/b +c ; c+a/b
  *
- * @param integerTest
+ * @param DoubleTest
  * @param mixed_addition_nume
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, mixed_addition_nume) {
-  fraction<int> sum = a + 5;
-  fraction<int> summ = 5 + a;
+TEST(DoubleTest, mixed_addition_nume) {
+  fraction<double> sum = aa + 5.0;
+  fraction<double> summ = 5.0 + aa;
   EXPECT_EQ(11, sum.getNumerator());
   EXPECT_EQ(11, summ.getNumerator());
 }
 
-/* ----------------------------------------------------------------*/
-/**
- * @brief  check fraction<U> + u and U+ fraction<U>
- *
- * @param integerTest
- * @param mixed_addition_deno
- */
-/* ----------------------------------------------------------------*/
-TEST(integerTest, mixed_addition_deno) {
-  fraction<int> sum = a + 5;
+TEST(DoubleTest, mixed_addition_deno) {
+  fraction<double> sum = aa + 5.0;
   EXPECT_EQ(2, sum.getDenominator());
-  fraction<int> summ = 5 + a;
+  fraction<double> summ = 5.0 + aa;
   EXPECT_EQ(2, summ.getDenominator());
 }
 
 /* ----------------------------------------------------------------*/
 /**
- * @brief  check fractions subtraction numerator results
+ * @brief  a/b -c/d
  *
- * @param integerTest
+ * @param DoubleTest
  * @param subtraction_numerator
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, subtraction_numerator) {
-  fraction<int> diff = a - b;
+TEST(DoubleTest, subtraction_numerator) {
+  fraction<double> diff = aa - bb;
   EXPECT_EQ(-1, diff.getNumerator());
 }
 
-/* ----------------------------------------------------------------*/
-/**
- * @brief  denominator with Subtraction of  two fractions result
- *
- * @param integerTest
- * @param subtraction_deno
- */
-/* ----------------------------------------------------------------*/
-TEST(integerTest, subtraction_deno) {
-  fraction<int> diff = a - b;
+TEST(DoubleTest, subtraction_deno) {
+  fraction<double> diff = aa - bb;
   EXPECT_EQ(4, diff.getDenominator());
 }
 /* ----------------------------------------------------------------*/
 /**
- * @brief  to check fraction<U> - U | U - fraction<U>
+ * @brief  a/b-c;c-a/b
  *
- * @param integerTest
+ * @param DoubleTest
  * @param mixed_sub_nume
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, mixed_sub_nume) {
-  fraction<int> diff = a - 5;
-  fraction<int> sub = 5 - a;
+TEST(DoubleTest, mixed_sub_nume) {
+  fraction<double> diff = aa - 5.0;
+  fraction<double> sub = 5.0 - aa;
   EXPECT_EQ(-9, diff.getNumerator());
   EXPECT_EQ(9, sub.getNumerator());
 }
 
-/* ----------------------------------------------------------------*/
-/**
- * @brief  to check fraction<U> - U | U - fraction<U> result denominator
- *
- * @param integerTest
- * @param mixed_sub_dino
- */
-/* ----------------------------------------------------------------*/
-TEST(integerTest, mixed_sub_deno) {
-  fraction<int> diff = a - 5;
+TEST(DoubleTest, mixed_sub_deno) {
+  fraction<double> diff = aa - 5.0;
   EXPECT_EQ(2, diff.getDenominator());
-  fraction<int> subb = 5 - a;
+  fraction<double> subb = 5.0 - aa;
   EXPECT_EQ(2, subb.getDenominator());
 }
 
 /* ----------------------------------------------------------------*/
 /**
- * @brief  product test
+ * @brief  a/b * c/d
  *
- * @param integerTest
+ * @param DoubleTest
  * @param multiply_test
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, multiply_test) {
-  fraction<int> mult = a * b;
+TEST(DoubleTest, multiply_test) {
+  fraction<double> mult = aa * bb;
   EXPECT_EQ(3, mult.getNumerator());
   EXPECT_EQ(8, mult.getDenominator());
 }
+TEST(DoubleTest, multiply_mix_test) {
+  fraction<double> mult = 8.0 * bb;
+  EXPECT_EQ(6.0, mult.getNumerator());
+  EXPECT_EQ(1.0, mult.getDenominator());
+  fraction<double> mult_inv = bb * 7.0;
+  EXPECT_EQ(21.0, mult_inv.getNumerator());
+  EXPECT_EQ(4.0, mult_inv.getDenominator());
+}
 /* ----------------------------------------------------------------*/
 /**
- * @brief  Product of U and fraction<U>
+ * @brief  (a/b) / (c/d)
  *
- * @param integerTest
- * @param multiply_mix_test
+ * @param DoubleTest
+ * @param divide_test
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, multiply_mix_test) {
-  fraction<int> mult = 8 * b;
-  EXPECT_EQ(6, mult.getNumerator());
-  EXPECT_EQ(1, mult.getDenominator());
-  fraction<int> mult_inv = b * 7;
-  EXPECT_EQ(21, mult_inv.getNumerator());
-  EXPECT_EQ(4, mult_inv.getDenominator());
-  /* ----------------------------------------------------------------*/
-  /**
-   * @brief  Division Test
-   *
-   * @param integerTest
-   * @param divide_test
-   */
-  /* ----------------------------------------------------------------*/
-}
-TEST(integerTest, divide_test) {
-  fraction<int> div = a / b;
+TEST(DoubleTest, divide_test) {
+  fraction<double> div = aa / bb;
   EXPECT_EQ(2, div.getNumerator());
   EXPECT_EQ(3, div.getDenominator());
 }
 /* ----------------------------------------------------------------*/
 /**
- * @brief  check division as fraction<U> / U ;U/fraction<U>
+ * @brief  a/b / (c) ; (c) / (a/b)
  *
- * @param integerTest
+ * @param DoubleTest
  * @param divide_mix_test
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, divide_mix_test) {
-  fraction<int> div = 8 / b;
+TEST(DoubleTest, divide_mix_test) {
+  fraction<double> div = 8.0 / bb;
   EXPECT_EQ(32, div.getNumerator());
   EXPECT_EQ(3, div.getDenominator());
-  fraction<int> div_inv = b / 8;
+  fraction<double> div_inv = bb / 8.0;
   EXPECT_EQ(3, div_inv.getNumerator());
   EXPECT_EQ(32, div_inv.getDenominator());
 }
 
 /* ----------------------------------------------------------------*/
 /**
- * @brief  to check which fraction is big
+ * @brief  a/b > c/d
  *
- * @param integerTest
+ * @param DoubleTest
  * @param greater_test
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, greater_test) {
-  bool greater = a > b;
+TEST(DoubleTest, greater_test) {
+  bool greater = aa > bb;
   ASSERT_FALSE(greater);
 }
 /* ----------------------------------------------------------------*/
 /**
- * @brief  fraction and number comparision
+ * @brief  a/b > c; c > a/b
  *
- * @param integerTest
+ * @param DoubleTest
  * @param greater_mix_test
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, greater_mix_test) {
-  bool big = a > 1;
+TEST(DoubleTest, greater_mix_test) {
+  bool big = aa > 1.0;
   ASSERT_FALSE(big);
-  bool bigg = (1 < a);
+  bool bigg = (1.0 < aa);
   ASSERT_FALSE(bigg);
 }
 /* ----------------------------------------------------------------*/
 /**
- * @brief  to check if < is working
+ * @brief  a/b < c/d
  *
- * @param integerTest
+ * @param DoubleTest
  * @param lesser_test
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, lesser_test) {
-  bool greater = a < b;
+TEST(DoubleTest, lesser_test) {
+  bool greater = aa < bb;
   ASSERT_TRUE(greater);
 }
 /* ----------------------------------------------------------------*/
 /**
- * @brief  checking a/b < c and c < a/b
+ * @brief  a/b < c; c<a/b
  *
- * @param integerTest
+ * @param DoubleTest
  * @param lesser_mix_test
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, lesser_mix_test) {
-  bool big = a < 1;
+TEST(DoubleTest, lesser_mix_test) {
+  bool big = aa < 1.0;
   ASSERT_TRUE(big);
-  bool bigg = (1 < a);
+  bool bigg = (1.0 < aa);
   ASSERT_FALSE(bigg);
 }
 
 /* ----------------------------------------------------------------*/
 /**
- * @brief  a/b == c/d fractions equality test
+ * @brief  a/b == c/d
  *
- * @param integerTest
+ * @param DoubleTest
  * @param equality_test
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, equality_test) {
-  bool equally = (b == a);
+TEST(DoubleTest, equality_test) {
+  bool equally = (bb == aa);
   ASSERT_FALSE(equally);
 }
 
 /* ----------------------------------------------------------------*/
 /**
- * @brief  a/b == c; c == a/b
+ * @brief  a/b ==c;c==a/b
  *
- * @param integerTest
+ * @param DoubleTest
  * @param equalityMixTest
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, equalityMixTest) {
-  bool equally = (2 == a);
+TEST(DoubleTest, equalityMixTest) {
+  bool equally = (2.0 == aa);
   ASSERT_FALSE(equally);
-  bool equallly = (a == 5);
+  bool equallly = (aa == 5.0);
   ASSERT_FALSE(equallly);
 }
 
@@ -294,26 +250,26 @@ TEST(integerTest, equalityMixTest) {
 /**
  * @brief  a/b !=c/d
  *
- * @param integerTest
+ * @param DoubleTest
  * @param notEqualTest
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, notEqualTest) {
-  bool not_equal = (a != b);
+TEST(DoubleTest, notEqualTest) {
+  bool not_equal = (aa != bb);
   ASSERT_TRUE(not_equal);
 }
 
 /* ----------------------------------------------------------------*/
 /**
- * @brief  a/b!=c;a!=c/d
+ * @brief  a/b !=c ;c!=a/b
  *
- * @param integerTest
+ * @param DoubleTest
  * @param notEqualMixTest
  */
 /* ----------------------------------------------------------------*/
-TEST(integerTest, notEqualMixTest) {
-  bool not_equall = (5 != b);
+TEST(DoubleTest, notEqualMixTest) {
+  bool not_equall = (5.0 != bb);
   ASSERT_TRUE(not_equall);
-  bool not_eqalll = (a != 5);
+  bool not_eqalll = (aa != 5.0);
   ASSERT_TRUE(not_eqalll);
 }
