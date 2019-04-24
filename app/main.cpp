@@ -37,7 +37,6 @@ int main() {
   fraction<int> b(77, 4);
 
   fraction<int> c = 5 + b + 10;
-
   std::cout << c << std::endl;
   return 0;
 }
