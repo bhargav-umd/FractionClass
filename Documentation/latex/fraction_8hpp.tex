@@ -1,5 +1,5 @@
-\hypertarget{fraction_8hpp}{}\section{/home/bob/\+Bob\+\_\+old/\+Mathworks/include/fraction.hpp File Reference}
-\label{fraction_8hpp}\index{/home/bob/\+Bob\+\_\+old/\+Mathworks/include/fraction.\+hpp@{/home/bob/\+Bob\+\_\+old/\+Mathworks/include/fraction.\+hpp}}
+\hypertarget{fraction_8hpp}{}\section{/home/bob/\+Bob\+\_\+old/\+Mathworks/\+Fraction\+Class/include/fraction.hpp File Reference}
+\label{fraction_8hpp}\index{/home/bob/\+Bob\+\_\+old/\+Mathworks/\+Fraction\+Class/include/fraction.\+hpp@{/home/bob/\+Bob\+\_\+old/\+Mathworks/\+Fraction\+Class/include/fraction.\+hpp}}
 
 
 Fraction Class file with definitions and declarations, (generally definitions and declarations should be separated in different files, here using templates to define/declare functions) Overloaded addition, subtraction,multiply,division,greater/lesser than,equality/non equality operators to perform appropriate actions with fractions.\+Also has display function and overloaded $>$$>$ and $<$$<$ functions to show output and get input respectively. Also includes find\+Remainder and greatest Common divisor function.  
@@ -210,6 +210,18 @@ greatest common divisor for number one and two
 \begin{DoxyReturn}{Returns}
 number of type T with G\+CD value 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{fraction_8hpp_ad71ce5d79457e67a200307c8e7955c45_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator"!=(const fraction$<$ T $>$ \&first, const fraction$<$ T $>$ \&second)}{operator!=(const fraction< T > &first, const fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf fraction}$<$T$>$ operator!= (
@@ -345,6 +357,18 @@ a/b != c
 \begin{DoxyReturn}{Returns}
 false if equal else true 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{fraction_8hpp_a93d4e34fcfb6818490f8a439d560c049_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator"!=(const T \&first, fraction$<$ T $>$ \&second)}{operator!=(const T &first, fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator!= (
@@ -372,6 +396,18 @@ a != c/d
 \begin{DoxyReturn}{Returns}
 true if not equal else false 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{fraction_8hpp_a161bd870d7335786dea8358347be8803_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator$\ast$(const fraction$<$ T $>$ \&first, const fraction$<$ T $>$ \&second)}{operator*(const fraction< T > &first, const fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf fraction}$<$ T $>$ operator$\ast$ (
@@ -416,6 +452,18 @@ product of two input fractions
 \begin{DoxyReturn}{Returns}
 product 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fraction_8hpp_aa44c78d4b034f5f70496ad76b71d15e6_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator$\ast$@{operator$\ast$}}
 \index{operator$\ast$@{operator$\ast$}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator$\ast$(const T \&first, const fraction$<$ T $>$ \&second)}{operator*(const T &first, const fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf fraction}$<$ T $>$ operator$\ast$ (
@@ -449,7 +497,7 @@ product of T and fraction$<$\+T$>$
 \begin{DoxyParams}{Parameters}
 {\em first} & a \\
 \hline
-{\em second} & c/d\\
+{\em second} & c/d \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -538,6 +586,18 @@ sum of two fractions
 \begin{DoxyReturn}{Returns}
 sum 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fraction_8hpp_a63ec63f05cd3a1548da7d2ff00fd60a6_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator+@{operator+}}
 \index{operator+@{operator+}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator+(const T \&first, const fraction$<$ T $>$ \&second)}{operator+(const T &first, const fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf fraction}$<$ T $>$ operator+ (
@@ -665,6 +725,18 @@ difference of two input fractions
 \begin{DoxyReturn}{Returns}
 difference 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fraction_8hpp_a6bdad9f1c32bf6e641b9fa5f70ee92fe_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator-\/(const T \&first, const fraction$<$ T $>$ \&second)}{operator-(const T &first, const fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf fraction}$<$ T $>$ operator-\/ (
@@ -792,6 +864,18 @@ division of two input fractions
 \begin{DoxyReturn}{Returns}
 ad/bc division 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fraction_8hpp_a4ad8f4a937536a26072298f08f2d29a3_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator/@{operator/}}
 \index{operator/@{operator/}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator/(const T \&first, const fraction$<$ T $>$ \&second)}{operator/(const T &first, const fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf fraction}$<$ T $>$ operator/ (
@@ -983,6 +1067,18 @@ check which one is smaller fraction a/b $<$ c/d a/b -\/ c/d $>$ 0 =$>$ ad -\/bc 
 \begin{DoxyReturn}{Returns}
 true if first is smaller else false 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{fraction_8hpp_ad0ace2e2114c6b41de426a4f4505eca3_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator$<$(fraction$<$ T $>$ \&first, const T \&second)}{operator<(fraction< T > &first, const T &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator$<$ (
@@ -1010,6 +1106,18 @@ check which one is smaller fraction a/b $<$ c a/b -\/ c $>$ 0 =$>$ a -\/bc $>$ 0
 \begin{DoxyReturn}{Returns}
 true if first is smaller else false 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{fraction_8hpp_a53c6efebd40ef67d99ef9dc2b3bd940a_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator$<$@{operator$<$}}
 \index{operator$<$@{operator$<$}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator$<$(const T \&first, fraction$<$ T $>$ \&second)}{operator<(const T &first, fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator$<$ (
@@ -1037,6 +1145,18 @@ check which one is smaller fraction a$<$ c/d a -\/ c/d $>$ 0 =$>$ ad -\/c $>$ 0 
 \begin{DoxyReturn}{Returns}
 true if first is smaller else false 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{fraction_8hpp_afab3e36727df8b80931454c2b8f123c3_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator$<$$<$@{operator$<$$<$}}
 \index{operator$<$$<$@{operator$<$$<$}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator$<$$<$(std\+::ostream \&out, const fraction$<$ T $>$ \&a)}{operator<<(std::ostream &out, const fraction< T > &a)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::ostream \& operator$<$$<$ (
@@ -1189,6 +1309,18 @@ equality comparision of a/b and c/d , they are equal when simplified versions ha
 \begin{DoxyReturn}{Returns}
 true if equal else false 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{fraction_8hpp_ae258c0505616fd872a06cf5ff2255a20_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator==@{operator==}}
 \index{operator==@{operator==}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator==(fraction$<$ T $>$ \&first, const T \&second)}{operator==(fraction< T > &first, const T &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator== (
@@ -1216,6 +1348,18 @@ a/b == c
 \begin{DoxyReturn}{Returns}
 true if equal else false 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{fraction_8hpp_a869713580aa3d3cb0576b1c291a33efa_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator==@{operator==}}
 \index{operator==@{operator==}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator==(const T \&first, fraction$<$ T $>$ \&second)}{operator==(const T &first, fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator== (
@@ -1243,6 +1387,18 @@ a == c/d
 \begin{DoxyReturn}{Returns}
 true if equal else false 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{fraction_8hpp_ad36531e9a0a6ce02ca01db9d4b072e37_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator$>$@{operator$>$}}
 \index{operator$>$@{operator$>$}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator$>$(const fraction$<$ T $>$ \&first, const fraction$<$ T $>$ \&second)}{operator>(const fraction< T > &first, const fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf fraction}$<$T$>$ operator$>$ (
@@ -1351,6 +1507,18 @@ check which one is bigger fraction a/b $>$ c/d a/b -\/ c/d $>$ 0 =$>$ ad -\/bc $
 \begin{DoxyReturn}{Returns}
 true if first is bigger else false 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{fraction_8hpp_a1798ecef70ab99cd74218f29cdc90b68_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator$>$@{operator$>$}}
 \index{operator$>$@{operator$>$}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator$>$(fraction$<$ T $>$ \&first, const T \&second)}{operator>(fraction< T > &first, const T &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator$>$ (
@@ -1378,6 +1546,18 @@ check which one is bigger fraction a/b $>$ c a/b -\/ c $>$ 0 =$>$ a -\/bc $>$ 0 
 \begin{DoxyReturn}{Returns}
 true if first is bigger else false 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{fraction_8hpp_a2f7dbd3340051e09786eb7d183f215d2_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator$>$@{operator$>$}}
 \index{operator$>$@{operator$>$}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator$>$(\+T \&first, fraction$<$ T $>$ \&second)}{operator>(T &first, fraction< T > &second)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator$>$ (
@@ -1405,6 +1585,18 @@ check which one is bigger fraction a/b $>$ c/d a -\/ c/d $>$ 0 =$>$ ad -\/c $>$ 
 \begin{DoxyReturn}{Returns}
 true if first is bigger else false 
 \end{DoxyReturn}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{fraction_8hpp_ad09f2b840a04f5592734b2dc49a78a98_cgraph}
+\end{center}
+\end{figure}
+
+
 \index{fraction.\+hpp@{fraction.\+hpp}!operator$>$$>$@{operator$>$$>$}}
 \index{operator$>$$>$@{operator$>$$>$}!fraction.\+hpp@{fraction.\+hpp}}
 \subsubsection[{\texorpdfstring{operator$>$$>$(std\+::istream \&in, fraction$<$ T $>$ \&a)}{operator>>(std::istream &in, fraction< T > &a)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::istream \& operator$>$$>$ (

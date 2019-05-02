@@ -9,6 +9,16 @@ Fraction class declaration mentioning all members.
 
 {\ttfamily \#include $<$fraction.\+hpp$>$}
 
+
+
+Collaboration diagram for fraction$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classfraction__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,10 +32,6 @@ T \hyperlink{classfraction_ab2c71b6d8a1fe8cc38fca27557c8af9e}{get\+Numerator} ()
 \begin{DoxyCompactList}\small\item\em Numerator getter function. \end{DoxyCompactList}\item 
 T \hyperlink{classfraction_a99611e6e50d2527d0b19c786995f401f}{get\+Denominator} () const 
 \begin{DoxyCompactList}\small\item\em getter function for denominator \end{DoxyCompactList}\item 
-void \hyperlink{classfraction_a2ab1807fd2d62646e10033fd161d239f}{set\+Numerator} (const T \&)
-\begin{DoxyCompactList}\small\item\em Numerator setter function. \end{DoxyCompactList}\item 
-void \hyperlink{classfraction_ac7753c1adda4d389178570718014d331}{set\+Denominator} (const T \&)
-\begin{DoxyCompactList}\small\item\em denominator setter function \end{DoxyCompactList}\item 
 void \hyperlink{classfraction_a9449f42f0fe675204aa66f930dc7f424}{display} ()
 \begin{DoxyCompactList}\small\item\em TO display fraction value. \end{DoxyCompactList}\item 
 void \hyperlink{classfraction_ad9cf1bb8fb5b761ed9bf3d47dd97af21}{simplify\+Fractions} ()
@@ -251,62 +257,6 @@ numerator of the \hyperlink{classfraction}{fraction(this)}
 \begin{DoxyReturn}{Returns}
 numerator value 
 \end{DoxyReturn}
-\index{fraction@{fraction}!set\+Denominator@{set\+Denominator}}
-\index{set\+Denominator@{set\+Denominator}!fraction@{fraction}}
-\subsubsection[{\texorpdfstring{set\+Denominator(const T \&)}{setDenominator(const T &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf fraction}$<$ T $>$\+::set\+Denominator (
-\begin{DoxyParamCaption}
-\item[{const T \&}]{dinom}
-\end{DoxyParamCaption}
-)}\hypertarget{classfraction_ac7753c1adda4d389178570718014d331}{}\label{classfraction_ac7753c1adda4d389178570718014d331}
-
-
-denominator setter function 
-
-Set Denominator.
-
-
-\begin{DoxyParams}{Parameters}
-{\em denominator} & to be set\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyTemplParams}{Template Parameters}
-{\em T} & \\
-\hline
-\end{DoxyTemplParams}
-
-\begin{DoxyParams}{Parameters}
-{\em dinom} & \\
-\hline
-\end{DoxyParams}
-\index{fraction@{fraction}!set\+Numerator@{set\+Numerator}}
-\index{set\+Numerator@{set\+Numerator}!fraction@{fraction}}
-\subsubsection[{\texorpdfstring{set\+Numerator(const T \&)}{setNumerator(const T &)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf fraction}$<$ T $>$\+::set\+Numerator (
-\begin{DoxyParamCaption}
-\item[{const T \&}]{numer}
-\end{DoxyParamCaption}
-)}\hypertarget{classfraction_a2ab1807fd2d62646e10033fd161d239f}{}\label{classfraction_a2ab1807fd2d62646e10033fd161d239f}
-
-
-Numerator setter function. 
-
-Set Numerator.
-
-
-\begin{DoxyParams}{Parameters}
-{\em numerator} & to be set\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyTemplParams}{Template Parameters}
-{\em T} & \\
-\hline
-\end{DoxyTemplParams}
-
-\begin{DoxyParams}{Parameters}
-{\em numer} & \\
-\hline
-\end{DoxyParams}
 \index{fraction@{fraction}!simplify\+Fractions@{simplify\+Fractions}}
 \index{simplify\+Fractions@{simplify\+Fractions}!fraction@{fraction}}
 \subsubsection[{\texorpdfstring{simplify\+Fractions()}{simplifyFractions()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf fraction}$<$ T $>$\+::simplify\+Fractions (
@@ -325,6 +275,18 @@ to reduce the fration to its minimum i.,e (2/4) = (1/2)
 {\em T} & \\
 \hline
 \end{DoxyTemplParams}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfraction_ad9cf1bb8fb5b761ed9bf3d47dd97af21_cgraph}
+\end{center}
+\end{figure}
+
+
 
 
 \subsection{Friends And Related Function Documentation}
@@ -998,4 +960,4 @@ istream
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/bob/\+Bob\+\_\+old/\+Mathworks/include/\hyperlink{fraction_8hpp}{fraction.\+hpp}\end{DoxyCompactItemize}
+/home/bob/\+Bob\+\_\+old/\+Mathworks/\+Fraction\+Class/include/\hyperlink{fraction_8hpp}{fraction.\+hpp}\end{DoxyCompactItemize}

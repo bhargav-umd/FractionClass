@@ -1,0 +1,7 @@
+<map id="operator*" name="operator*">
+<area shape="rect" id="node2" href="$classfraction.html#ab2c71b6d8a1fe8cc38fca27557c8af9e" title="Numerator getter function. " alt="" coords="138,5,290,32"/>
+<area shape="rect" id="node3" href="$classfraction.html#a99611e6e50d2527d0b19c786995f401f" title="getter function for denominator " alt="" coords="131,56,297,83"/>
+<area shape="rect" id="node4" href="$classfraction.html#ad9cf1bb8fb5b761ed9bf3d47dd97af21" title="To reduce the value of the fraction to minimal. " alt="" coords="128,107,300,133"/>
+<area shape="rect" id="node5" href="$fraction_8hpp.html#ad71ce5d79457e67a200307c8e7955c45" title="To find greatest common. " alt="" coords="348,107,511,133"/>
+<area shape="rect" id="node6" href="$fraction_8hpp.html#a843a3f34ca879eba5e52c3ec841d0597" title="To find the Remainder if first is divided by second, Used subtraction method to find remainder(mod)..." alt="" coords="559,107,665,133"/>
+</map>
